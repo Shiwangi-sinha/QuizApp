@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Leetcode/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode/Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Quiz Application.iml" filepath="$PROJECT_DIR$/.idea/Quiz Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuizApp/QuizApp.iml" filepath="$PROJECT_DIR$/QuizApp/QuizApp.iml" />
+    </modules>
+  </component>
+</project>
