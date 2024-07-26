@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class expenseTracker {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
     private static final String USER_DATA_FILE = "users.txt";
     private static final String EXPENSE_DATA_FILE = "expenses.txt";
 
@@ -28,7 +28,7 @@ public class expenseTracker {
         System.out.println("2. Login");
         System.out.println("3. Exit");
         System.out.print("Choose an option: ");
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = Integer.parseInt(sc.nextLine());
 
         switch (choice) {
             case 1:
@@ -52,7 +52,7 @@ public class expenseTracker {
         System.out.println("3. View Category-wise Summary");
         System.out.println("4. Logout");
         System.out.print("Choose an option: ");
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = Integer.parseInt(sc.nextLine());
 
         switch (choice) {
             case 1:
@@ -74,9 +74,9 @@ public class expenseTracker {
 
     private static void registerUser() {
         System.out.print("Enter username: ");
-        String username = scanner.nextLine();
+        String username = sc.nextLine();
         System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+        String password = sc.nextLine();
 
         if (users.containsKey(username)) {
             System.out.println("Username already exists. Please try again.");
@@ -89,9 +89,9 @@ public class expenseTracker {
 
     private static void loginUser() {
         System.out.print("Enter username: ");
-        String username = scanner.nextLine();
+        String username = sc.nextLine();
         System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+        String password = sc.nextLine();
 
         if (users.containsKey(username) && users.get(username).equals(password)) {
             loggedInUser = username;
@@ -102,11 +102,11 @@ public class expenseTracker {
 
     private static void addExpense() {
         System.out.print("Enter date (YYYY-MM-DD): ");
-        String date = scanner.nextLine();
+        String date = sc.nextLine();
         System.out.print("Enter category: ");
-        String category = scanner.nextLine();
+        String category = sc.nextLine();
         System.out.print("Enter amount: ");
-        double amount = Double.parseDouble(scanner.nextLine());
+        double amount = Double.parseDouble(sc.nextLine());
 
         expenses.add(new Expense(loggedInUser, date, category, amount));
         saveExpenseData();
